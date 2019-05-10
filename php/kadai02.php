@@ -10,12 +10,12 @@ $head=<<<HEADEOF
 <meta name="description" content="このページは演習04のページです。">
 <meta name="keyword" content="演算子">
 <title>Columbine Simulator</title>
+<link rel="stylesheet" href="../base.css">
 </head>
 HEADEOF;
 echo $head;
 echo '<body>';
-echo '<h1>課題02</h1>';
-echo '<p>演算子の練習です</p>';
+echo '<h2>コーラムバイン ステータス計算</h2>';
 $hp_mag   = $_POST['feature'] == "hp"   ?15.5 :13.5;
 $atk_mag  = $_POST['feature'] == "atk"  ? 3.8 : 3.2;
 $matk_mag = $_POST['feature'] == "matk" ? 3.8 : 3.2;
@@ -43,13 +43,13 @@ $int = ($_POST['int_point'] + $_POST['int_juwel'] + $_POST['int_canning']);
 $end = ($_POST['end_point'] + $_POST['end_juwel'] + $_POST['end_canning']);
 $agi = ($_POST['agi_point'] + $_POST['agi_juwel'] + $_POST['agi_canning']);
 
-$hp   = $vit * $hp_mag   + $hp_helmet;
-$atk  = $str * $atk_mag  + $atk_weapon;
-$matk = $int * $matk_mag + $matk_weapon;
-$def  = $end * $def_mag  + $def_armer + $def_shield;
-$mdef = $end * $mdef_mag + $mdef_armer + $mdef_shield;
-$spd  = $agi * $spd_mag  + $spd_shose + $spd_shield + $spd_helmet;
-$cri  = $agi * $cri_mag  + $cri_weapon;
+$hp   =200 + ($vit * $hp_mag   + $hp_helmet);
+$atk  = 10 + ($str * $atk_mag  + $atk_weapon);
+$matk = 10 + ($int * $matk_mag + $matk_weapon);
+$def  = 10 + ($end * $def_mag  + $def_armer + $def_shield);
+$mdef = 10 + ($end * $mdef_mag + $mdef_armer + $mdef_shield);
+$spd  = 10 + ($agi * $spd_mag  + $spd_shose + $spd_shield + $spd_helmet);
+$cri  = 1.0+ ($agi * $cri_mag  + $cri_weapon);
 
 if($_POST['element'] == "fire"){
   $atk *= 1.16;
@@ -65,14 +65,13 @@ if($_POST['element'] == "fire"){
 }else{
   echo '※属性が選択されていません。';
 }
-
-echo '<p>hp  :'.$hp.'です。';
-echo '<p>atk :'.$atk.'です。';
-echo '<p>matk:'.$matk.'です。';
-echo '<p>def :'.$def.'です。';
-echo '<p>mdef:'.$mdef.'です。';
-echo '<p>spd :'.$spd.'です。';
-echo '<p>cri :'.$cri.'です。';
+echo '<p>hp  :'.floor($hp);
+echo '<p>atk :'.floor($atk);
+echo '<p>matk:'.floor($matk);
+echo '<p>def :'.floor($def);
+echo '<p>mdef:'.floor($mdef);
+echo '<p>spd :'.floor($spd);
+echo '<p>cri :'.$cri;
 echo '</body>';
 echo '</html>';
 ?>
