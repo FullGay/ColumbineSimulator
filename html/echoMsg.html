@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="description" content="このページは課題02のページです。">
+<meta name="keyword" content="演算子">
+<link rel="stylesheet" href="../base.css">
+<title>Columbine Simulator</title>
+</head>
+<body>
+<h1>課題02</h1>
+<p>演算子の練習です</p>
+<form action="../php/kadai02.php" method="POST">
+
+属性 :
+<input type="radio" name="element" value="fire">火
+<input type="radio" name="element" value="water">水
+<input type="radio" name="element" value="soil">土
+<input type="radio" name="element" value="wind">風
+<input type="radio" name="element" value="moon">月
+<br>
+
+特性 :
+<input type="radio" name="feature" value="hp">HP
+<input type="radio" name="feature" value="atk">物理攻撃
+<input type="radio" name="feature" value="matk">魔法攻撃
+<input type="radio" name="feature" value="def">物理防御
+<input type="radio" name="feature" value="mdef">魔法防御
+<input type="radio" name="feature" value="spd">攻撃速度
+<input type="radio" name="feature" value="cri">クリ率
+<input type="radio" name="feature" value="none">該当なし
+<br>
+
+<table>
+  <tr><!--1行目-->
+    <td>ステ</td>
+    <td>ポイント</td>
+    <td></td>
+    <td>魔珠</td>
+    <td></td>
+    <td>猫缶</td>
+  </tr>
+  <tr><!--1行目-->
+    <td>体力</td>
+    <td><input type="text" size="4" name="vit_point" placeholder="1"></td>
+    <td>+</td>
+    <td><input type="text" size="4" name="vit_juwel" placeholder="0"></td>
+    <td>+</td>
+    <td><input type="text" size="4" name="vit_canning" placeholder="0"></td>
+  </tr>
+  <tr><!--1行目-->
+    <td>腕力</td>
+    <td><input type="text" size="4" name="str_point" placeholder="1"></td>
+    <td>+</td>
+    <td><input type="text" size="4" name="str_juwel" placeholder="0"></td>
+    <td>+</td>
+    <td><input type="text" size="4" name="str_canning" placeholder="0"></td>
+  </tr>
+  <tr><!--1行目-->
+    <td>知力</td>
+    <td><input type="text" size="4" name="int_point" placeholder="1"></td>
+    <td>+</td>
+    <td><input type="text" size="4" name="int_juwel" placeholder="0"></td>
+    <td>+</td>
+    <td><input type="text" size="4" name="int_canning" placeholder="0"></td>
+  </tr>
+  <tr><!--1行目-->
+    <td>耐力</td>
+    <td><input type="text" size="4" name="end_point" placeholder="1"></td>
+    <td>+</td>
+    <td><input type="text" size="4" name="end_juwel" placeholder="0"></td>
+    <td>+</td>
+    <td><input type="text" size="4" name="end_canning" placeholder="0"></td>
+  </tr>
+  <tr><!--1行目-->
+    <td>敏捷</td>
+    <td><input type="text" size="4" name="agi_point" placeholder="1"></td>
+    <td>+</td>
+    <td><input type="text" size="4" name="agi_juwel" placeholder="0"></td>
+    <td>+</td>
+    <td><input type="text" size="4" name="agi_canning" placeholder="0"></td>
+  </tr>
+</table>
+
+<p><input type="submit" value="送信"></p>
+</form>
+</body>
+</html>
